@@ -1,0 +1,24 @@
+[package]
+name = "lminc-web"
+version = "1.0.0"
+authors = ["Tom Boddaert <lminc-web@tomboddaert.com>"]
+edition = "2021"
+description = "LMinC (https://github.com/tomBoddaert/lminc/) for the web"
+readme = "README.md"
+homepage = "https://github.com/tomBoddaert/lminc-web/"
+repository = "https://github.com/tomBoddaert/lminc-web/"
+license = "MIT OR Apache-2.0"
+keywords = ["assembler", "compiler", "simulation"]
+categories = ["simulation", "compilers"]
+
+[features]
+default = ["extended"]
+extended = ["lminc/extended"]
+
+[dependencies]
+lminc = { git = "https://github.com/tomboddaert/lminc", version = "2.0.1", default-features = false }
+
+[lib]
+name = "lminc_web"
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]

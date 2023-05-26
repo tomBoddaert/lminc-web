@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMinC Web</title>
+    <meta name="title" content="LMinC Web">
+    <link rel="icon" type="image/svg+xml;base64" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjA0OCIgaGVpZ2h0PSIyMDQ4IiB2aWV3Qm94PSIwIDAgMTI4IDEyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTQsNjRMMzksMjAuNjk4N0w4OSwyMC42OTg3TDExNCw2NEwxNCw2NCIgZmlsbD0iIzJjMmYzMyIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lam9pbj0iYmV2ZWwiLz48cGF0aCBkPSJNMTQsNjRMMTE0LDY0TDg5LDEwNy4zMDEzTDY0LDY0TDM5LDEwNy4zMDEzWiIgZmlsbD0iIzU4NjVGMiIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lam9pbj0iYmV2ZWwiLz48cGF0aCBkPSJNNjQsNjRMODksMTA3LjMwMTNMMzksMTA3LjMwMTNaIiBmaWxsPSIjZjZmNmY2IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVqb2luPSJiZXZlbCIvPjwvc3ZnPg==">
+
+    <meta name="description" content="LMinC Assembler and Simulator Online">
+    <meta name="keywords" content="tomBoddaert, programming, LMinC">
+    <meta name="author" content="Tom Boddaert">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.22.0/ace.min.js" integrity="sha512-q6CTB0jS+VuJnSct82rVcWlI06LGzNjaG3CWenHWVUncRvc4UQMFkA3a5Ip880xr+lBx38FcHDclOxPdSg+sBw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/interface.js" type="module"></script>
+    <script src="/editor.js" type="module"></script>
+    <script src="/save_load.js" type="module"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>LMinC Web</h1>
+        <a href="https://github.com/tomboddaert/lminc-web">GitHub</a>
+        <a href="https://tomboddaert.com/"><img src="https://tomboddaert.com/resources/profile-image.svg" style="width: 60px;"></a>
+    </header>
+
+    <div id="Options">
+        <label>
+            <span>Show invisible:</span>
+            <input type="checkbox" name="setShowInvisibles">
+        </label>
+    </div>
+
+    <div id="EditorTop">
+        <div id="EditorTabs">
+            <span>Editor</span>
+            <span class="tabSeparator"></span>
+            <span>Output</span>
+            <span class="tabSeparator"></span>
+            <span>Input</span>
+        </div>
+        <div id="EditorButtons">
+            <span>Run</span>
+            <span>Load</span>
+            <span>Save</span>
+        </div>
+    </div>
+    <div id="Editor"></div>
+    <div id="EditorBase"></div>
+
+    <p id="Instructions"></p>
+</body>
+
+</html>

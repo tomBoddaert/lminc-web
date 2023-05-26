@@ -1,0 +1,178 @@
+:root {
+    --bg-primary: #3c3e41;
+    --bg-secondary: #24292e;
+    --bg-tertiary: #2d3034;
+    --bg-tertiary-active: #454a4e;
+
+    --fg-primary: #fff;
+}
+
+html {
+    background-color: var(--bg-secondary);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    min-height: calc(100vh - 20px);
+    margin: auto;
+    padding: 10px;
+    border-left: 2px solid var(--bg-tertiary-active);
+    border-right: 2px solid var(--bg-tertiary-active);
+    background-color: var(--bg-primary);
+}
+
+body > * {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    color: var(--fg-primary);
+}
+
+label > input {
+    padding: 2px;
+}
+
+/* -- Header -- */
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header > h1 {
+    display: inline-block;
+    margin-right: auto;
+}
+
+header > a {
+    padding: 6px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #6495ed;
+}
+
+/* --- Options --- */
+
+#Options {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 16px;
+}
+
+/* --- Editor --- */
+
+#Editor {
+    width: 100%;
+    font-size: 16px;
+}
+
+/* -- Editor Top bar -- */
+
+#EditorTop {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid var(--bg-tertiary-active);
+    justify-content: space-between;
+    align-items: stretch;
+    font-size: 20px;
+    background-color: var(--bg-secondary);
+}
+
+/* - Editor Tabs - */
+
+#EditorTabs {
+    display: flex;
+    align-items: center;
+}
+
+#EditorTabs > * {
+    background-color: var(--bg-tertiary);
+    padding: 8px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+#EditorTabs > *:first-child,
+#EditorTabs > .active + .tabSeparator + * {
+    border-top-left-radius: 10px;
+}
+
+#EditorTabs > *:last-child,
+#EditorTabs > *:has(+ .tabSeparator + .active) {
+    border-top-right-radius: 10px;
+}
+
+#EditorTabs > *.active {
+    background-color: var(--bg-tertiary-active);
+    border-radius: 10px 10px 0 0;
+    cursor: default;
+}
+
+#EditorTabs > *:hover {
+    background-color: var(--bg-tertiary-active);
+}
+
+.tabSeparator {
+    align-self: flex-end;
+    width: 1px;
+    height: 24px;
+    padding: 0 !important;
+    border-top: 8px solid var(--bg-tertiary);
+    border-bottom: 8px solid var(--bg-tertiary);
+    background-color: var(--bg-tertiary-active) !important;
+}
+
+.active + .tabSeparator,
+.tabSeparator:has(+ .active) {
+    display: none;
+    border-top: none;
+    background-color: var(--bg-tertiary) !important;
+}
+
+/* - Editor Buttons - */
+
+#EditorButtons {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    margin-right: 6px;
+    gap: 6px;
+}
+
+#EditorButtons > * {
+    padding: 3px 9px 3px 9px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--bg-primary);
+    background-color: var(--bg-tertiary);
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+#EditorButtons > *:hover {
+    border-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
+}
+
+/* -- Editor Base -- */
+
+#EditorBase {
+    content: ' ';
+    width: 100%;
+    height: 10px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--bg-secondary);
+}
+
+/* --- Instructions --- */
+
+#Instructions {
+    align-self: flex-end;
+}
