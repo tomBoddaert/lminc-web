@@ -1,6 +1,6 @@
 [package]
 name = "lminc-web"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Tom Boddaert <lminc-web@tomboddaert.com>"]
 edition = "2021"
 description = "LMinC (https://github.com/tomBoddaert/lminc/) for the web"

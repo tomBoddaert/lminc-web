@@ -8,6 +8,7 @@
 }
 
 html {
+    scrollbar-gutter: stable;
     background-color: var(--bg-secondary);
 }
 
@@ -43,6 +44,7 @@ header {
 header > h1 {
     display: inline-block;
     margin-right: auto;
+    margin-left: 20px;
 }
 
 header > a {
@@ -95,7 +97,9 @@ header > a {
     padding: 8px;
     cursor: pointer;
     user-select: none;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s,
+        border-top-left-radius 0.2s,
+        border-top-right-radius 0.2s;
 }
 
 #EditorTabs > *:first-child,
